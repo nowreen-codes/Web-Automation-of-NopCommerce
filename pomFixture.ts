@@ -6,8 +6,6 @@ import Books from "../pages/books"
 import Checkout from "../pages/checkout"
 import { homedir } from "os"
 
-
-
 type pages = {
     registrationPage: RegistrationPage;
     loginPage: LoginPage;
