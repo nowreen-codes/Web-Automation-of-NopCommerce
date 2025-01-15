@@ -4,9 +4,11 @@ const password = "q123#hsjueA";
 
 test.describe("Page object test demo", async () => {
 
+
+    
+//Only for Registration Process   
 test("Register test_01", async ({ page, registrationPage }) => {
 await page.goto("https://test460.nop-station.com/en/register?returnUrl=%2Fen%2F");
-//expect(register.enterGender()).toBeChecked();
 await registrationPage.enterFirstName("Nowreen");
 await registrationPage.enterLasttName("Islam");
 await registrationPage.DateOfBirth("25.08.1850");
@@ -18,6 +20,8 @@ await registrationPage.enterConfirmPassword(password);
 await registrationPage.clickRegister();
 
 })
+
+//Only for Login Process
 test("Login test_02", async ({ page, loginPage }) => {
     await page.goto("https://test460.nop-station.com/en/login?returnUrl=%2Fen%2F");
 
@@ -33,6 +37,7 @@ test("Login test_02", async ({ page, loginPage }) => {
 
 })
 
+//Only for add to cart multiple products
 test("Add to cart test_03", async ({ page, loginPage, homePage, jewelry}) => {
     await page.goto("https://test460.nop-station.com/en/login?returnUrl=%2Fen%2F");
     await loginPage.login(email, password);
@@ -43,6 +48,8 @@ test("Add to cart test_03", async ({ page, loginPage, homePage, jewelry}) => {
     await books.updateQuantityForProduct("Vintage Style Engagement Ring", 3);
 })
 
+
+//From login to Checkout
 test.only("Checkout test_04", async ({ page, loginPage, homePage, jewelry, checkout }) => {
 
  await page.goto("https://test460.nop-station.com/en/login?returnUrl=%2Fen%2F");
