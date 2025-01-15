@@ -1,0 +1,16 @@
+{
+    "firstname": "Nowreen",
+    "lastname": "Islam",
+    "email": "nou@gmail.com",
+    "company": "BS",
+    "password": "123",
+    "confirmpassword": "123",
+    "country":"Bangladesh",
+    "state":"ঢাকা",
+    "city":"Dhaka",
+    "address1":"dhaka",
+    "address2":"",
+    "zipcode":"1215",
+    "phone":"019278549921"
+ 
+}
