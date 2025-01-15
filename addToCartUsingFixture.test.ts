@@ -9,8 +9,8 @@ test.describe("Page object test demo", async () => {
 //Only for Registration Process   
 test("Register test_01", async ({ page, registrationPage }) => {
 await page.goto("https://test460.nop-station.com/en/register?returnUrl=%2Fen%2F");
-await registrationPage.enterFirstName("Nowreen");
-await registrationPage.enterLasttName("Islam");
+await registrationPage.enterFirstName(data.firstname);
+await registrationPage.enterLasttName(data.lastname);
 await registrationPage.DateOfBirth("25.08.1850");
 await registrationPage.enterEmail(email);
 await registrationPage.enterCompanyDetails("");
@@ -76,17 +76,17 @@ test.only("Checkout test_04", async ({ page, loginPage, homePage, jewelry, check
  expect(Billing_Address_ActualMsg).toBe("Billing address");
 
 
- await checkout.enterFirstName("Nowreen");
- await checkout.enterLastName("Islam");
+ await checkout.enterFirstName(data.firstname);
+ await checkout.enterLastName(data.lastname);
  await checkout.enterEmail("");
- await checkout.enterCompanyName("BS");
- await checkout.enterCountryName("Bangladesh");
- await checkout.enterStateName("ঢাকা");
- await checkout.enterCityName("Dhaka");
- await checkout.enterAddress1("Cantonment");
- await checkout.enterAddress2("");
- await checkout.enterZip("123");
- await checkout.enterPhoneNo("019299999999");
+ await checkout.enterCompanyName(data.company);
+ await checkout.enterCountryName(data.country);
+ await checkout.enterStateName(data.state);
+ await checkout.enterCityName(data.city);
+ await checkout.enterAddress1(data.address1);
+ await checkout.enterAddress2(data.address2);
+ await checkout.enterZip(data.zipcode);
+ await checkout.enterPhoneNo(data.phone);
  await checkout.enterFaxNo("");
  
  await checkout.clickNext();
